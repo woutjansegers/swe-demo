@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+//apps/swe-demo/src/app/app.ts
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { NavbarContainer } from "@swe-demo/swe-demo-app-feature";
 
 @Component({
-  imports: [NxWelcome, RouterModule],
-  selector: 'app-root',
-  templateUrl: './app.html',
-  styleUrl: './app.css',
+  imports: [RouterModule, NavbarContainer],
+  selector: "app-root",
+  templateUrl: "./app.html",
+  styleUrl: "./app.css",
 })
 export class App {
-  protected title = 'swe-demo-app';
+  protected title = "swe-demo";
+  
 }
