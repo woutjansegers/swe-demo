@@ -1,4 +1,3 @@
-//apps/swe-demo/src/app/app.ts
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { NavbarContainer } from "@swe-demo/swe-demo-app-feature";
@@ -11,5 +10,4 @@ import { NavbarContainer } from "@swe-demo/swe-demo-app-feature";
 })
 export class App {
   protected title = "swe-demo";
-  
 }
