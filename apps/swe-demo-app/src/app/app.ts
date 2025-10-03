@@ -10,5 +10,4 @@ import { NavbarContainer } from "@swe-demo/swe-demo-app-feature";
 })
 export class App {
   protected title = "swe-demo";
-  
 }

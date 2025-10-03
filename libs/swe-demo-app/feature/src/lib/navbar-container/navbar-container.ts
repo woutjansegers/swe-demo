@@ -1,31 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import {Navbar, NavItem} from '@swe-demo/swe-demo-app-ui'
+//navbar-container.ts
+import { Component, computed, inject } from "@angular/core";
+import { Router, RouterModule } from "@angular/router";
+import { Navbar } from "@swe-demo/swe-demo-app-ui";
 
 @Component({
-  selector: 'lib-swe-demo-app-feature-navbar-container',
+  selector: "lib-swe-demo-app-feature-navbar-container",
   imports: [Navbar, RouterModule],
-  templateUrl: './navbar-container.html',
-  styleUrl: './navbar-container.css',
+  templateUrl: "./navbar-container.html",
+  styleUrl: "./navbar-container.css",
 })
 export class NavbarContainer {
-  readonly items: NavItem[] = [
-    {
-      label: "Home", path: "/"
-    },
-    {
-      label: "Products", path: "/products"
-    },
-    {
-      label: "Account", path: "/account"
-    }
-  ]
+  private router = inject(Router);
+
+  readonly items = computed(() => [
+    { label: "Home", path: "/" },
+    { label: "Products", path: "/products" },
+    { label: "Account", path: "/account" },
+  ]);
 
   onLogout() {
     console.log("TODO: logging out logic");
   }
 
   onNavigate(path: string) {
-    console.log("navigate to" , path);
+    this.router.navigate([path]);
   }
 }

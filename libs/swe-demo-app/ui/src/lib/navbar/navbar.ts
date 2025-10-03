@@ -1,11 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-export interface NavItem {
-  label : string;
-  path : string;
-  icon? : string;
-}
+import { NavItem } from '@swe-demo/shared-domain';
 
 @Component({
   selector: 'lib-swe-demo-app-ui-navbar',
